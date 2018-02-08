@@ -1,0 +1,30 @@
+{
+  "name": "alexantr/yii2-colorpicker",
+  "description": "Color picker input widget for Yii 2",
+  "keywords": ["yii2", "widget", "colorpicker", "color-picker", "jscolor"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Yashkin",
+      "email": "alex@yashkin.by"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/alexantr/yii2-colorpicker/issues",
+    "source": "https://github.com/alexantr/yii2-colorpicker"
+  },
+  "require": {
+    "yiisoft/yii2": "~2.0.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "alexantr\\colorpicker\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}

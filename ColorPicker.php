@@ -62,6 +62,6 @@ class ColorPicker extends InputWidget
         $id = $this->options['id'];
         $encodedOptions = !empty($this->clientOptions) ? Json::htmlEncode($this->clientOptions) : '{}';
 
-        $view->registerJs("jQuery('#$id', $encodedOptions)");
+        $view->registerJs("jQuery('#$id').minicolors($encodedOptions);");
     }
 }

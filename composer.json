@@ -1,7 +1,7 @@
 {
   "name": "alexantr/yii2-colorpicker",
   "description": "Color picker input widget for Yii 2",
-  "keywords": ["yii2", "widget", "colorpicker", "color-picker", "jscolor"],
+  "keywords": ["yii2", "widget", "colorpicker", "color-picker", "jquery-minicolors"],
   "type": "yii2-extension",
   "license": "MIT",
   "authors": [
@@ -24,7 +24,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0.x-dev"
+      "dev-master": "2.0.x-dev"
     }
   }
 }

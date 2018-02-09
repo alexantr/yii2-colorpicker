@@ -5,6 +5,7 @@ namespace alexantr\colorpicker;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Json;
+use yii\web\View;
 use yii\widgets\InputWidget;
 
 /**
@@ -14,6 +15,11 @@ use yii\widgets\InputWidget;
  */
 class ColorPicker extends InputWidget
 {
+    /**
+     * @var string jQuery MiniColors CDN base URL
+     */
+    public static $cdnBaseUrl = 'https://cdnjs.cloudflare.com/ajax/libs/jquery-minicolors/2.2.6/';
+
     /**
      * @inheritdoc
      */
@@ -52,16 +58,20 @@ class ColorPicker extends InputWidget
     }
 
     /**
-     * Registers color picker
+     * Registers script
      */
     protected function registerClientScript()
     {
         $view = $this->getView();
-        ColorPickerAsset::register($view);
+        WidgetAsset::register($view);
 
         $id = $this->options['id'];
         $encodedOptions = !empty($this->clientOptions) ? Json::htmlEncode($this->clientOptions) : '{}';
 
-        $view->registerJs("jQuery('#$id').minicolors($encodedOptions);");
+        $url = self::$cdnBaseUrl . 'jquery.minicolors.min.js';
+
+        $view->registerCssFile(self::$cdnBaseUrl . 'jquery.minicolors.min.css');
+        $view->registerJs("alexantr.colorPickerWidget.setScriptUrl('$url');", View::POS_END);
+        $view->registerJs("alexantr.colorPickerWidget.register('$id', $encodedOptions);", View::POS_END);
     }
 }

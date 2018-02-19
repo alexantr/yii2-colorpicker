@@ -2,6 +2,10 @@
 
 This extension renders an input with [jQuery MiniColors](https://github.com/claviska/jquery-minicolors).
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/alexantr/yii2-colorpicker.svg)](https://packagist.org/packages/alexantr/yii2-colorpicker)
+[![Total Downloads](https://img.shields.io/packagist/dt/alexantr/yii2-colorpicker.svg)](https://packagist.org/packages/alexantr/yii2-colorpicker)
+[![License](https://img.shields.io/github/license/alexantr/yii2-colorpicker.svg)](https://raw.githubusercontent.com/alexantr/yii2-colorpicker/master/LICENSE)
+
 > **Note:** Version 1.x uses [jscolor Color Picker](http://jscolor.com/)
 
 ## Installation
